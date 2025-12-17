@@ -16,13 +16,15 @@ export function OrderForm({ onFocus, onBlur }: any) {
     address: "",
   });
 
-const handleFocus = () => {  
-  onFocus?.()
-}
+  const [loading, setLoading] = useState(false);
 
-const handleBlur = () => {
-  onBlur?.()
-}
+  const handleFocus = () => {
+    onFocus?.();
+  };
+
+  const handleBlur = () => {
+    onBlur?.();
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const packageToAmount = {
@@ -37,7 +39,7 @@ const handleBlur = () => {
       address: formData.address,
       amount: packageToAmount[selectedPackage],
     };
-
+    setLoading(true);
     try {
       await fetch(
         "https://script.google.com/macros/s/AKfycbxA9_k8G0UKXOPV7kfIFyK98Fh-F6DaahGPP0vCXsEZi-VJiAy5RyqtQO8bvN3V0lYc6w/exec",
@@ -50,8 +52,8 @@ const handleBlur = () => {
           body: JSON.stringify(payload),
         }
       );
-
-      alert("🎉 Đặt hàng thành công!");
+      setLoading(false);
+      alert("🎉 Cám ơn anh/ chị đã đặt hàng, shop sẽ liên hệ lại sớm nhất để xác nhận đơn hàng!");
       setFormData({ name: "", phone: "", address: "" });
       setSelectedPackage("double");
     } catch (err) {
@@ -75,8 +77,8 @@ const handleBlur = () => {
             Họ và tên <span className="text-red-600">*</span>
           </label>
           <input
-           onFocus={handleFocus}
-  onBlur={handleBlur}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
             type="text"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -91,8 +93,8 @@ const handleBlur = () => {
             Số điện thoại <span className="text-red-600">*</span>
           </label>
           <input
-           onFocus={handleFocus}
-  onBlur={handleBlur}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
             type="tel"
             required
             value={formData.phone}
@@ -110,8 +112,8 @@ const handleBlur = () => {
             Địa chỉ <span className="text-red-600">*</span>
           </label>
           <textarea
-           onFocus={handleFocus}
-  onBlur={handleBlur}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
             value={formData.address}
             onChange={(e) =>
               setFormData({ ...formData, address: e.target.value })
@@ -282,8 +284,9 @@ const handleBlur = () => {
         <Button
           type="submit"
           className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-6 text-lg shadow-lg"
+          disabled={loading}
         >
-          ĐẶT HÀNG NGAY - NHẬN ƯU ĐÃI
+          {loading ? "ĐANG ĐẶT HÀNG..." : "ĐẶT HÀNG NGAY - NHẬN ƯU ĐÃI"}
         </Button>
 
         <p className="text-center text-xs text-gray-600">
