@@ -157,7 +157,7 @@ export function OrderForm({ onFocus, onBlur }: any) {
                 </div>
                 <div className="ml-7">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-2xl font-bold text-orange-600">
+                    <span className="text-xl font-bold text-orange-600">
                       89.000đ
                     </span>
                     <span className="text-sm line-through text-gray-500">
@@ -204,7 +204,7 @@ export function OrderForm({ onFocus, onBlur }: any) {
                 </div>
                 <div className="ml-7">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-2xl font-bold text-orange-600">
+                    <span className="text-xl font-bold text-orange-600">
                       159.000đ
                     </span>
                     <span className="text-sm line-through text-gray-500">
@@ -257,7 +257,7 @@ export function OrderForm({ onFocus, onBlur }: any) {
                 </div>
                 <div className="ml-7">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-2xl font-bold text-orange-600">
+                    <span className="text-xl font-bold text-orange-600">
                       229.000đ
                     </span>
                     <span className="text-sm line-through text-gray-500">
