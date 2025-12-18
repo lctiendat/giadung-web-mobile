@@ -45,6 +45,26 @@ export default function ProductPage() {
     "/images/10.png",
   ];
 
+  useEffect(() => {
+    const formElement = document.getElementById("order-form");
+    if (!formElement) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setHideCart(entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    observer.observe(formElement);
+
+    return () => observer.disconnect();
+  }, []);
+
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
   };
