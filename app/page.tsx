@@ -32,7 +32,18 @@ export default function ProductPage() {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const images = ["/images/1.png", "/images/2.png"];
+  const images = [
+    "/images/1.png",
+    "/images/2.png",
+    "/images/3.png",
+    "/images/4.png",
+    "/images/5.png",
+    "/images/6.png",
+    "/images/7.png",
+    "/images/8.png",
+    "/images/9.png",
+    "/images/10.png",
+  ];
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -151,15 +162,14 @@ export default function ProductPage() {
           <div className="flex items-center justify-center gap-3">
             <span className="text-4xl font-black">89K</span>
             <div className="text-left">
-              <div className="text-xl line-through opacity-80">199K</div>
+              <div className="text-xl line-through opacity-80">189K</div>
               <Badge className="bg-yellow-400 text-red-600 border-0 font-bold text-xs">
-                -50%
+                -50% + MIỄN SHIP
               </Badge>
             </div>
           </div>
           <div className="text-center">
             <p className="text-sm font-bold">🎁 Tiết kiệm ngay 100.000đ</p>
-            <p className="text-xs opacity-90">+ Tặng kèm túi đựng 50K</p>
           </div>
           <div className="bg-black/50 backdrop-blur-sm rounded-lg p-3">
             <p className="text-center text-xs mb-2 font-bold">
@@ -409,12 +419,12 @@ export default function ProductPage() {
         <div className="space-y-2 mb-4">
           <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-lg p-3">
             <Check className="w-5 h-5 flex-shrink-0 text-yellow-400" />
-            <span className="text-sm font-bold">Mua 1 chỉ 89K + FREESHIP</span>
+            <span className="text-sm font-bold">Mua 1 chỉ 89K + MIỄN SHIP</span>
           </div>
           <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-lg p-3">
             <Check className="w-5 h-5 flex-shrink-0 text-yellow-400" />
             <span className="text-sm font-bold">
-              Mua 2 chỉ 159K + FREESHIP (Tiết kiệm 18K)
+              Mua 2 chỉ 159K + MIỄN SHIP (Tiết kiệm 18K)
             </span>
           </div>
           <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-lg p-3">
@@ -468,7 +478,7 @@ export default function ProductPage() {
             <div>
               <h4 className="font-black text-base">GIAO HÀNG SIÊU TỐC</h4>
               <p className="text-sm mt-1 opacity-90">
-                Giao hàng trong 24h tại HCM/HN. Toàn quốc 2-3 ngày. FREESHIP
+                Giao hàng trong 24h tại HCM/HN. Toàn quốc 2-3 ngày. MIỄN SHIP
                 100%
               </p>
             </div>
@@ -487,6 +497,15 @@ export default function ProductPage() {
           </div>
         </div>
       </div>
+
+      {/* Order Form */}
+      <OrderForm
+        id="order-form"
+        onFocus={() => {
+          setHideCart(true);
+        }}
+        onBlur={() => setHideCart(false)}
+      />
 
       {/* Customer Reviews */}
       <div className="p-4 bg-gradient-to-br from-gray-50 to-white m-4 rounded-xl shadow-xl border-4 border-black">
@@ -644,14 +663,6 @@ export default function ProductPage() {
         </div>
       </div>
 
-      {/* Order Form */}
-      <OrderForm
-        id="order-form"
-        onFocus={() => {          
-          setHideCart(true)}}
-        onBlur={() => setHideCart(false)}
-      />
-
       <div className="bg-white border-2 border-red-600 rounded-xl p-5 mx-4 mb-24 shadow-lg">
         <h3 className="font-bold text-lg mb-4 text-center text-red-600">
           HỖ TRỢ KHÁCH HÀNG 24/7
@@ -672,7 +683,7 @@ export default function ProductPage() {
             </div>
             <div>
               <p className="text-xs text-gray-500">Địa chỉ</p>
-              <p className="font-bold text-black">Hà Nội, Việt Nam</p>
+              <p className="font-bold text-black">Đà Nẵng, Việt Nam</p>
             </div>
           </div>
         </div>
@@ -688,7 +699,7 @@ export default function ProductPage() {
             className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 rounded-xl shadow-lg transform hover:scale-105 transition-all flex items-center justify-center gap-2 text-lg"
           >
             <ShoppingCart className="w-6 h-6" />
-            MUA NGAY - FREESHIP TOÀN QUỐC
+            MUA NGAY - MIỄN SHIP TOÀN QUỐC
           </button>
         </div>
       )}

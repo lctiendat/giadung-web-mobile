@@ -13,7 +13,7 @@ interface PurchaseData {
 
 const purchaseData: PurchaseData[] = [
   { name: "Ngân Nguyễn", phone: "0385915xxx", message: "gửi thêm cho chị 5 cái", time: "2 giây trước", avatar: "N" },
-  { name: "Minh Tuấn", phone: "0912345xxx", message: "đặt thêm 3 bộ màu xanh", time: "5 giây trước", avatar: "M" },
+  { name: "Minh Tuấn", phone: "0912345xxx", message: "đặt thêm 3 cái ạ", time: "5 giây trước", avatar: "M" },
   {
     name: "Thu Hương",
     phone: "0987654xxx",
@@ -22,8 +22,9 @@ const purchaseData: PurchaseData[] = [
     avatar: "T",
   },
   { name: "Quang Đạt", phone: "0909876xxx", message: "đặt 4 cái giao Hà Nội", time: "15 giây trước", avatar: "Q" },
-  { name: "Lan Anh", phone: "0976543xxx", message: "cho em đặt 6 bộ màu be", time: "20 giây trước", avatar: "L" },
+  { name: "Lan Anh", phone: "0976543xxx", message: "cho em đặt thêm 6 cái", time: "20 giây trước", avatar: "L" },
   { name: "Hoàng Nam", phone: "0945678xxx", message: "mua 2 cái ship HCM", time: "25 giây trước", avatar: "H" },
+  { name: "Minh Huy", phone: "0912345xxx", message: "đặt thêm 5 cái ạ", time: "30 giây trước", avatar: "M" },  
 ]
 
 export function PurchaseToast() {

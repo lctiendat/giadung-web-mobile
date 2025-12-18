@@ -161,12 +161,12 @@ export function OrderForm({ onFocus, onBlur }: any) {
                       89.000đ
                     </span>
                     <span className="text-sm line-through text-gray-500">
-                      150.000đ
+                      189.000đ
                     </span>
                   </div>
                   <div className="flex items-center gap-1 text-xs text-green-600 font-medium">
                     <Check className="w-3 h-3" />
-                    <span>FREESHIP toàn quốc</span>
+                    <span>MIỄN SHIP toàn quốc</span>
                   </div>
                 </div>
               </div>
@@ -208,17 +208,17 @@ export function OrderForm({ onFocus, onBlur }: any) {
                       159.000đ
                     </span>
                     <span className="text-sm line-through text-gray-500">
-                      300.000đ
+                      299.000đ
                     </span>
                   </div>
                   <div className="space-y-1">
                     <div className="flex items-center gap-1 text-xs text-green-600 font-medium">
                       <Check className="w-3 h-3" />
-                      <span>FREESHIP toàn quốc</span>
+                      <span>MIỄN SHIP toàn quốc</span>
                     </div>
                     <div className="flex items-center gap-1 text-xs text-orange-600 font-medium">
                       <Check className="w-3 h-3" />
-                      <span>Tiết kiệm 130.000đ</span>
+                      <span>Tiết kiệm 140.000đ</span>
                     </div>
                   </div>
                 </div>
@@ -258,20 +258,20 @@ export function OrderForm({ onFocus, onBlur }: any) {
                 <div className="ml-7">
                   <div className="flex items-baseline gap-2 mb-1">
                     <span className="text-2xl font-bold text-orange-600">
-                      230.000đ
+                      229.000đ
                     </span>
                     <span className="text-sm line-through text-gray-500">
-                      450.000đ
+                      459.000đ
                     </span>
                   </div>
                   <div className="space-y-1">
                     <div className="flex items-center gap-1 text-xs text-green-600 font-medium">
                       <Check className="w-3 h-3" />
-                      <span>FREESHIP toàn quốc</span>
+                      <span>MIỄN SHIP toàn quốc</span>
                     </div>
                     <div className="flex items-center gap-1 text-xs text-orange-600 font-medium">
                       <Check className="w-3 h-3" />
-                      <span>Tiết kiệm 200.000đ</span>
+                      <span>Tiết kiệm 230.000đ</span>
                     </div>
                   </div>
                 </div>
