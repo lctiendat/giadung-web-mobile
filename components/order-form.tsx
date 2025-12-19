@@ -82,7 +82,7 @@ export function OrderForm({ onFocus, onBlur }: any) {
             type="text"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
             placeholder="Nhập họ và tên"
           />
         </div>
@@ -101,7 +101,7 @@ export function OrderForm({ onFocus, onBlur }: any) {
             onChange={(e) =>
               setFormData({ ...formData, phone: e.target.value })
             }
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
             placeholder="Nhập số điện thoại"
           />
         </div>
@@ -118,9 +118,9 @@ export function OrderForm({ onFocus, onBlur }: any) {
             onChange={(e) =>
               setFormData({ ...formData, address: e.target.value })
             }
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
+            className="w-full px-3 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none text-sm"
             placeholder="Nhập địa chỉ nhận hàng"
-            rows={3}
+            rows={2}
           />
         </div>
 
@@ -153,11 +153,11 @@ export function OrderForm({ onFocus, onBlur }: any) {
                       <Check className="w-3 h-3 text-white" />
                     )}
                   </div>
-                  <span className="font-bold text-gray-800">Mua 1 cái</span>
+                  <span className="font-bold text-gray-800 text-sm">Mua 1 cái</span>
                 </div>
                 <div className="ml-7">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-xl font-bold text-orange-600">
+                    <span className="text-md font-bold text-orange-600">
                       89.000đ
                     </span>
                     <span className="text-sm line-through text-gray-500">
@@ -200,11 +200,11 @@ export function OrderForm({ onFocus, onBlur }: any) {
                       <Check className="w-3 h-3 text-white" />
                     )}
                   </div>
-                  <span className="font-bold text-gray-800">Mua 2 cái</span>
+                  <span className="font-bold text-gray-800 text-sm">Mua 2 cái</span>
                 </div>
                 <div className="ml-7">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-xl font-bold text-orange-600">
+                    <span className="text-md font-bold text-orange-600">
                       159.000đ
                     </span>
                     <span className="text-sm line-through text-gray-500">
@@ -253,11 +253,11 @@ export function OrderForm({ onFocus, onBlur }: any) {
                       <Check className="w-3 h-3 text-white" />
                     )}
                   </div>
-                  <span className="font-bold text-gray-800">Mua 3 cái</span>
+                  <span className="font-bold text-gray-800 text-sm">Mua 3 cái</span>
                 </div>
                 <div className="ml-7">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-xl font-bold text-orange-600">
+                    <span className="text-md font-bold text-orange-600">
                       229.000đ
                     </span>
                     <span className="text-sm line-through text-gray-500">

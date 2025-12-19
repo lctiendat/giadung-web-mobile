@@ -719,7 +719,7 @@ export default function ProductPage() {
             className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 rounded-xl shadow-lg transform hover:scale-105 transition-all flex items-center justify-center gap-2 text-lg"
           >
             <ShoppingCart className="w-6 h-6" />
-            MUA NGAY - MIỄN SHIP TOÀN QUỐC
+            MUA NGAY - MIỄN SHIP
           </button>
         </div>
       )}

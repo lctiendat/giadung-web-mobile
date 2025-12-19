@@ -7,7 +7,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Móc treo hút chân không - Gia dụng tiện ích',
+  title: 'Hơn 11.820 đã mua hàng',
   description: 'Móc treo hút chân không tiện ích, lắp đặt không khoan, bám chắc trên bề mặt nhẵn, chịu lực tốt, chống nước, phù hợp phòng tắm và nhà bếp.',
   generator: 'giadungtientic',
   icons: {
