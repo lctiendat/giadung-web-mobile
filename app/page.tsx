@@ -521,10 +521,10 @@ export default function ProductPage() {
       {/* Order Form */}
       <OrderForm
         id="order-form"
-        onFocus={() => {
-          setHideCart(true);
-        }}
-        onBlur={() => setHideCart(false)}
+        // onFocus={() => {
+        //   setHideCart(true);
+        // }}
+        // onBlur={() => setHideCart(false)}
       />
 
       {/* Customer Reviews */}

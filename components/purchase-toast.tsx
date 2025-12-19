@@ -17,7 +17,7 @@ const purchaseData: PurchaseData[] = [
   {
     name: "Thu Hương",
     phone: "0987654xxx",
-    message: "mua 2 cái màu hồng nha shop",
+    message: "mua 2 cái nha shop",
     time: "10 giây trước",
     avatar: "T",
   },

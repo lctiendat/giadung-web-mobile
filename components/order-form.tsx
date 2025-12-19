@@ -66,11 +66,11 @@ export function OrderForm({ onFocus, onBlur }: any) {
       id="order-form"
       className="bg-white p-4 m-4 rounded-lg shadow-lg border-2 border-orange-500"
     >
-      <h3 className="font-bold text-gray-800 mb-4 text-center text-lg">
+      <h3 className="font-bold text-gray-800 mb-1 text-center text-lg">
         ĐẶT HÀNG NGAY
       </h3>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-1">
         {/* Name Input */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -133,7 +133,7 @@ export function OrderForm({ onFocus, onBlur }: any) {
           {/* Single Package */}
           <div
             onClick={() => setSelectedPackage("single")}
-            className={`relative border-2 rounded-lg p-4 mb-3 cursor-pointer transition-all ${
+            className={`relative border-2 rounded-lg p-3 mb-3 cursor-pointer transition-all ${
               selectedPackage === "single"
                 ? "border-orange-500 bg-orange-50"
                 : "border-gray-300 bg-white hover:border-orange-300"
@@ -153,14 +153,16 @@ export function OrderForm({ onFocus, onBlur }: any) {
                       <Check className="w-3 h-3 text-white" />
                     )}
                   </div>
+                  <div>
                   <span className="font-bold text-gray-800 text-sm">Mua 1 cái</span>
+                  </div>
                 </div>
                 <div className="ml-7">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-md font-bold text-orange-600">
+                    <span className="text-sm font-bold text-orange-600">
                       89.000đ
                     </span>
-                    <span className="text-sm line-through text-gray-500">
+                    <span className="text-xs line-through text-gray-500">
                       189.000đ
                     </span>
                   </div>
@@ -176,7 +178,7 @@ export function OrderForm({ onFocus, onBlur }: any) {
           {/* Double Package */}
           <div
             onClick={() => setSelectedPackage("double")}
-            className={`relative border-2 rounded-lg p-4 mb-3 cursor-pointer transition-all ${
+            className={`relative border-2 rounded-lg p-3 mb-3 cursor-pointer transition-all ${
               selectedPackage === "double"
                 ? "border-orange-500 bg-orange-50"
                 : "border-gray-300 bg-white hover:border-orange-300"
@@ -204,10 +206,10 @@ export function OrderForm({ onFocus, onBlur }: any) {
                 </div>
                 <div className="ml-7">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-md font-bold text-orange-600">
+                    <span className="text-sm font-bold text-orange-600">
                       159.000đ
                     </span>
-                    <span className="text-sm line-through text-gray-500">
+                    <span className="text-xs line-through text-gray-500">
                       299.000đ
                     </span>
                   </div>
@@ -229,7 +231,7 @@ export function OrderForm({ onFocus, onBlur }: any) {
           {/* Triple Package */}
           <div
             onClick={() => setSelectedPackage("triple")}
-            className={`relative border-2 rounded-lg p-4 cursor-pointer transition-all ${
+            className={`relative border-2 rounded-lg p-3 cursor-pointer transition-all ${
               selectedPackage === "triple"
                 ? "border-orange-500 bg-orange-50"
                 : "border-gray-300 bg-white hover:border-orange-300"
@@ -257,10 +259,10 @@ export function OrderForm({ onFocus, onBlur }: any) {
                 </div>
                 <div className="ml-7">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-md font-bold text-orange-600">
+                    <span className="text-sm font-bold text-orange-600">
                       229.000đ
                     </span>
-                    <span className="text-sm line-through text-gray-500">
+                    <span className="text-xs line-through text-gray-500">
                       459.000đ
                     </span>
                   </div>
@@ -283,10 +285,10 @@ export function OrderForm({ onFocus, onBlur }: any) {
         {/* Submit Button */}
         <Button
           type="submit"
-          className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-6 text-lg shadow-lg"
+          className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-6 text-md shadow-lg mt-1"
           disabled={loading}
         >
-          {loading ? "ĐANG ĐẶT HÀNG..." : "ĐẶT HÀNG NGAY - NHẬN ƯU ĐÃI"}
+          {loading ? "ĐANG ĐẶT HÀNG..." : "XÁC NHẬN ĐẶT HÀNG"}
         </Button>
 
         <p className="text-center text-xs text-gray-600">
