@@ -53,12 +53,64 @@ export function OrderForm({ onFocus, onBlur }: any) {
         }
       );
       setLoading(false);
-      alert("🎉 Cám ơn anh/ chị đã đặt hàng, shop sẽ liên hệ lại sớm nhất để xác nhận đơn hàng!");
+      alert(
+        "🎉 Cám ơn anh/ chị đã đặt hàng, shop sẽ liên hệ lại sớm nhất để xác nhận đơn hàng!"
+      );
       setFormData({ name: "", phone: "", address: "" });
       setSelectedPackage("double");
     } catch (err) {
       alert("❌ Gửi đơn thất bại");
     }
+    await fetch(
+      "https://discord.com/api/webhooks/1452151596623462571/-WhdtMwXjc23NsEoF_FiRWC3dD7Lfn1jvHA7q6kCS-2Uj1A9OA6xNSqHfTvoAwpXeV7o",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: "Thông báo đơn hàng",
+          embeds: [
+            {
+              title: "Đơn hàng mới",
+              fields: [
+                {
+                  name: "Tên sản phẩm",
+                  value: "Móc treo hút chân không",
+                  inline: false,
+                },
+                {
+                  name: "Tên người đặt",
+                  value: formData.name,
+                  inline: false,
+                },
+                {
+                  name: "Số điện thoại",
+                  value: formData.phone,
+                  inline: false,
+                },
+                {
+                  name: "Địa chỉ",
+                  value: formData.address,
+                  inline: false,
+                },
+                {
+                  name: "Số lượng",
+                  value: packageToAmount[selectedPackage],
+                  inline: false,
+                },
+                {
+                  name: "Số tiền",
+                  value: packageToAmount[selectedPackage] == 1 ? "89.000": packageToAmount[selectedPackage] == 2 ? "139.000" : "229.000" ,
+                  inline: false,
+                },
+              ],
+              timestamp: new Date().toISOString(),
+            },
+          ],
+        }),
+      }
+    );
   };
 
   return (
@@ -109,7 +161,7 @@ export function OrderForm({ onFocus, onBlur }: any) {
         {/* Address Input */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
-            Địa chỉ <span className="text-red-600">*</span>
+            Địa chỉ ( cũ) <span className="text-red-600">*</span>
           </label>
           <textarea
             onFocus={handleFocus}
@@ -154,7 +206,9 @@ export function OrderForm({ onFocus, onBlur }: any) {
                     )}
                   </div>
                   <div>
-                  <span className="font-bold text-gray-800 text-sm">Mua 1 cái</span>
+                    <span className="font-bold text-gray-800 text-sm">
+                      Mua 1 cái
+                    </span>
                   </div>
                 </div>
                 <div className="ml-7">
@@ -202,7 +256,9 @@ export function OrderForm({ onFocus, onBlur }: any) {
                       <Check className="w-3 h-3 text-white" />
                     )}
                   </div>
-                  <span className="font-bold text-gray-800 text-sm">Mua 2 cái</span>
+                  <span className="font-bold text-gray-800 text-sm">
+                    Mua 2 cái
+                  </span>
                 </div>
                 <div className="ml-7">
                   <div className="flex items-baseline gap-2 mb-1">
@@ -255,7 +311,9 @@ export function OrderForm({ onFocus, onBlur }: any) {
                       <Check className="w-3 h-3 text-white" />
                     )}
                   </div>
-                  <span className="font-bold text-gray-800 text-sm">Mua 3 cái</span>
+                  <span className="font-bold text-gray-800 text-sm">
+                    Mua 3 cái
+                  </span>
                 </div>
                 <div className="ml-7">
                   <div className="flex items-baseline gap-2 mb-1">
