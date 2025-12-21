@@ -280,7 +280,7 @@ export default function ProductPage() {
         <div className="grid grid-cols-2 gap-2">
           <Image
             src="/images/10.png"
-            alt="Gấp quần áo gọn gàng"
+            alt="Gấp quần áo gọn gàng 1."
             width={150}
             height={150}
             className="w-full rounded-lg shadow-md"
