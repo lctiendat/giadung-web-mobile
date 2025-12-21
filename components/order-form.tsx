@@ -37,7 +37,7 @@ export function OrderForm({ onFocus, onBlur }: any) {
       name: formData.name,
       phone: formData.phone,
       address: formData.address,
-      amount: packageToAmount[selectedPackage],
+      amount: packageToAmount[selectedPackage] + " móc treo",
     };
     setLoading(true);
     try {
