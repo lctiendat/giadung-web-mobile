@@ -344,22 +344,22 @@ export default function ProductPage() {
           />
         </div>
 
-        <div className="bg-red-50 border-2 border-red-600 rounded-lg p-3 text-center">
+        {/* <div className="bg-red-50 border-2 border-red-600 rounded-lg p-3 text-center">
           <p className="text-red-600 font-bold text-sm">HÌNH THẬT SHOP CHỤP</p>
           <p className="text-xs text-gray-700 mt-1">
             100% sản phẩm như hình - Cam kết hoàn tiền nếu không giống
           </p>
-        </div>
-
+        </div> */}
+{/* 
         <Image
           src="/images/image.png"
           alt="Trong suốt tiện lợi"
           width={400}
           height={300}
           className="w-full rounded-lg shadow-md"
-        />
+        /> */}
 
-        <div className="grid grid-cols-4 gap-2">
+        {/* <div className="grid grid-cols-4 gap-2">
           <Image
             src="/images/1.png"
             alt="Màu be"
@@ -388,7 +388,7 @@ export default function ProductPage() {
             height={100}
             className="w-full rounded-lg shadow-md"
           />
-        </div>
+        </div> */}
       </div>
 
       {/* Product Specs */}
@@ -422,15 +422,15 @@ export default function ProductPage() {
             <span className="font-bold text-black">TREO QUẦN ÁO, MÓC KHOÁ</span>
           </div>
         </div>
-        <Button
+        {/* <Button
           onClick={scrollToForm}
           className="w-full mt-4 bg-red-600 hover:bg-red-700 text-white font-bold py-6 text-lg"
         >
           MUA NGAY
-        </Button>
+        </Button> */}
       </div>
 
-      <div className="bg-gradient-to-br from-red-600 via-red-700 to-black text-white p-5 m-4 rounded-xl shadow-2xl border-4 border-yellow-400">
+      {/* <div className="bg-gradient-to-br from-red-600 via-red-700 to-black text-white p-5 m-4 rounded-xl shadow-2xl border-4 border-yellow-400">
         <div className="text-center mb-4">
           <Flame className="w-12 h-12 mx-auto mb-2 text-yellow-400" />
           <h3 className="font-black text-xl">🎁 COMBO ƯU ĐÃI CỰC SỐC</h3>
@@ -470,10 +470,10 @@ export default function ProductPage() {
         <p className="text-center text-xs mt-3 font-bold text-yellow-400">
           ⚠️ CHỈ CÒN 23 SUẤT ƯU ĐÃI - NHANH TAY KẺO HẾT!
         </p>
-      </div>
+      </div> */}
 
       {/* Why Choose Us */}
-      <div className="p-4 space-y-3">
+      {/* <div className="p-4 space-y-3">
         <h3 className="font-black text-center text-black text-xl">
           🏆 TẠI SAO 2,847 NGƯỜI ĐÃ CHỌN CHÚNG TÔI?
         </h3>
@@ -516,7 +516,7 @@ export default function ProductPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Order Form */}
       <OrderForm
@@ -694,7 +694,7 @@ export default function ProductPage() {
             </div>
             <div>
               <p className="text-xs text-gray-500">Email</p>
-              <p className="font-bold text-black">support@shop.vn</p>
+              <p className="font-bold text-black">support@giadunggiare.vn</p>
             </div>
           </div>
           <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
@@ -703,7 +703,7 @@ export default function ProductPage() {
             </div>
             <div>
               <p className="text-xs text-gray-500">Địa chỉ</p>
-              <p className="font-bold text-black">Đà Nẵng, Việt Nam</p>
+              <p className="font-bold text-black">Quận Hoàng Mai, Hà Nội</p>
             </div>
           </div>
         </div>
